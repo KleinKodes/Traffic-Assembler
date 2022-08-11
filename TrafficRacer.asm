@@ -109,10 +109,10 @@ booleanFalse: .word 0
 
 
 #sound effects maybe?
-pitch: .byte 65, 
-duration: .byte 100
-instrument: .byte 60
-volume: .byte 100
+##pitch: .byte 65, 
+##duration: .byte 100
+##instrument: .byte 60
+##volume: .byte 100
 
 
 
@@ -132,22 +132,22 @@ volume: .byte 100
 main:
 
 
-li $t6 5
-li $t7 0
+##li $t6 5
+##li $t7 0
 
 
 MUSIC:
 
-li $v0, 31 
-la $t0, pitch($t7)
-la $t1, duration 
-la $t2, instrument
-la $t3, volume 
-move $a0, $t0 
-move $a1, $t1 
-move $a2, $t2
-move $a3, $t3 
-syscall 
+##li $v0, 31 
+##la $t0, pitch($t7)
+##la $t1, duration 
+##la $t2, instrument
+##la $t3, volume 
+##move $a0, $t0 
+##move $a1, $t1 
+##move $a2, $t2
+##move $a3, $t3 
+##syscall 
 
 
 MUSIC_DONE:
@@ -370,6 +370,12 @@ addi $sp $sp -4
 lw $t1 myCarAddress
 sw $t1 ($sp)
 
+
+addi $sp $sp -4
+lw $t1 booleanTrue
+sw $t1 ($sp)
+
+
 addi $sp $sp -4
 lw $t1 myCarDefaultAddress
 sw $t1 ($sp)
@@ -397,6 +403,12 @@ sw $t1 ($sp)
 addi $sp $sp -4
 lw $t1 myCarBottomBound
 sw $t1 ($sp)
+
+
+addi $sp $sp -4
+lw $t1 booleanTrue #is my car
+sw $t1 ($sp)
+
 
 
 
@@ -453,6 +465,11 @@ lw $t1 truckAddress
 sw $t1 ($sp)
 
 addi $sp $sp -4
+lw $t1 booleanFalse #not my car
+sw $t1 ($sp)
+
+
+addi $sp $sp -4
 lw $t1 truckDefaultAddress
 sw $t1 ($sp)
 
@@ -479,6 +496,13 @@ sw $t1 ($sp)
 addi $sp $sp -4
 lw $t1 truckBottomBound
 sw $t1 ($sp)
+
+
+
+addi $sp $sp -4
+lw $t1 booleanFalse #not my car
+sw $t1 ($sp)
+
 
 
 
@@ -534,6 +558,11 @@ lw $t1 tankAddress
 sw $t1 ($sp)
 
 addi $sp $sp -4
+lw $t1 booleanFalse #not my car
+sw $t1 ($sp)
+
+
+addi $sp $sp -4
 lw $t1 tankDefaultAddress
 sw $t1 ($sp)
 
@@ -559,6 +588,11 @@ sw $t1 ($sp)
 
 addi $sp $sp -4
 lw $t1 tankBottomBound
+sw $t1 ($sp)
+
+
+addi $sp $sp -4
+lw $t1 booleanFalse #not my car
 sw $t1 ($sp)
 
 
@@ -613,6 +647,11 @@ lw $t1 stripsAddress
 sw $t1 ($sp)
 
 addi $sp $sp -4
+lw $t1 booleanFalse #not my car
+sw $t1 ($sp)
+
+
+addi $sp $sp -4
 lw $t1 stripsDefaultAddress
 sw $t1 ($sp)
 
@@ -639,6 +678,12 @@ sw $t1 ($sp)
 addi $sp $sp -4
 lw $t1 stripsBottomBound
 sw $t1 ($sp)
+
+
+addi $sp $sp -4
+lw $t1 booleanFalse #not my car
+sw $t1 ($sp)
+
 
 
 
@@ -965,25 +1010,37 @@ CALCULATE_CAR_POSITION:
 
 
 lw $t2 ($sp)  #loads y velocity from stack
-addi $sp $sp 4
 
-lw $t1 ($sp) #loads x velocity from stack
-addi $sp $sp 4
 
-lw $t4 ($sp) #loads y coordinate from stack
-addi $sp $sp 4
+lw $t1 4($sp) #loads x velocity from stack
 
-lw $t5 ($sp) #loads x coordinate from stack
-addi $sp $sp 4
 
-lw $t0 ($sp) #loads car address from stack
-addi $sp $sp 4
+lw $t4 8($sp) #loads y coordinate from stack
+
+
+lw $t5 12($sp) #loads x coordinate from stack
+
+lw $t0 16($sp) #loads car address from stack
+
 
 #calculating new coordinates first... simply add velocity to old coordinates
 add $t5 $t5 $t1 #add x velocity to x coord
+
+lw $t6 20($sp) #loads the if this is my car flag
+addi $sp $sp 24
+
+beqz $t6 ANOTHER_LOVER_CAR
+
+li $t3 5
+li $t6 1
+blt $t2 $t6 SLOW_DOWN #moves car back if speed is at 1 or lower
+blt $t2 $t3 LEAVE_Y_ALONE #only moves if velocity is 5 or higher or 1/lower
+SLOW_DOWN: 
+ANOTHER_LOVER_CAR:
 sub $t4 $t4 $t2 #add y velocity to y coord
 addi $t4 $t4 2
 
+LEAVE_Y_ALONE:
 
 #basic y velocity starts at 2... at this level car stays same pos
 #if velocity is one move y position back by 1 pixel per frame
@@ -998,8 +1055,14 @@ addi $t4 $t4 2
 #if x velocity is -1 head left  1px per frame
 
 #in essence new address = old address + 4(x velocity) + -(4*64)(y velocitt - 2)
+beqz $t6 ANOTHER_LOVER_CAR2
 
-
+li $t3 5
+li $t6 1
+blt $t2 $t6 SLOW_DOWN2 #moves car back if speed is at 1 or lower
+blt $t2 $t3 LEAVE_Y_ALONE2 #only moves if velocity is 5 or higher or 1/lower
+SLOW_DOWN2:
+ANOTHER_LOVER_CAR2:
 addi $t3 $0 -256 #(-4*64)
 addi $t2 $t2 -2 #(y velocity - 2)
 mult $t3 $t2
@@ -1007,6 +1070,8 @@ mflo $t3  #-(4*64)(y velocitt - 2)
 
 
 add $t0 $t0 $t3 #add to address
+
+LEAVE_Y_ALONE2:
 
 
 addi $t3 $0 4
@@ -1016,9 +1081,7 @@ add $t0 $t0 $t3
 
 
 
-#Reset x velocity to 0
 
-sw $0 myCarXVelocity
 
 
 #NOW NEED TO RUN COLLISSION CHECKS
@@ -1040,8 +1103,8 @@ blt $t5 $t9 RESET_POS
 bgt $t4 $t6 RESET_POS
 bgt $t5 $t7 RESET_POS
 
-#since reset pos moves stack bby 12 if we don't go there i need ti mirror movement here
-addi $sp $sp 12
+#since reset pos moves stack bby 12 if we don't go there i need to mirror movement here
+addi $sp $sp 16
 
 
 
@@ -1130,15 +1193,16 @@ lw $t5  4($sp) #myCarDefaultCoords+4
 lw $t0 8($sp) # myCarDefaultAddress
 lw $t6 12($sp) # is this my car flag
 
-bnez $6 NOT_MY_MOTOR
+beqz $t6 NOT_MY_MOTOR
 
+move $s6 $t6 #to test LOL
 lw $t7 life
 subi $t7 $t7 1
 sw $t7 life
 
 NOT_MY_MOTOR:
 
-addi $sp $sp 12
+addi $sp $sp 16
 
 
 
@@ -1160,6 +1224,10 @@ CHECK_KEYBOARD:
 li $t9, 0xffff0000 
 lw $t8, 0($t9) 
 beq $t8, 1, KEYPRESS_HAPPENED
+#Reset x velocity to 0
+
+sw $0 myCarXVelocity
+
 jr $ra
 
 KEYPRESS_HAPPENED:
@@ -1184,6 +1252,11 @@ sw $t2 myCarXVelocity
 jr $ra
 
 RESPOND_TO_s:
+
+#Reset x velocity to 0
+
+sw $0 myCarXVelocity
+
 lw $t2 myCarYVelocity
 addi $t2 $t2 -1
 beq $t2 -1 LOWER_LIMIT #makes sure Y velocity never goes below 1
@@ -1194,6 +1267,9 @@ sw $t2 truckYVelocity
 lw $t2 tankYVelocity
 addi $t2 $t2 1
 sw $t2 tankYVelocity
+
+
+
 jr $ra
 
 LOWER_LIMIT:
@@ -1205,23 +1281,46 @@ jr $ra
 RESPOND_TO_w:
 lw $t2 myCarYVelocity
 addi $t2 $t2 1
-beq $t2 6 UPPER_LIMIT #makes sure Y velocity never goes above 5
+beq $t2 7 UPPER_LIMIT #makes sure Y velocity never goes above 5
 sw $t2 myCarYVelocity
+ONLY_MOVE_SCREEN_DOWN: # making it so that car doesn't go up until u are at speed 4
 lw $t2 truckYVelocity
 addi $t2 $t2 -1
 sw $t2 truckYVelocity
 lw $t2 tankYVelocity
 addi $t2 $t2 -1
 sw $t2 tankYVelocity
+
+
+
+
 jr $ra
 
 UPPER_LIMIT:
-addi $t2 $0 5
+addi $t2 $0 6
 sw $t2 myCarYVelocity
 jr $ra
 
 RESPOND_TO_q:
 j EXIT
+
+
+
+
+
+
+
+
+
+#Collision function
+#current plan is to spawn cars smartly so that 2 cars don't crash eachother in same lane
+#then i can only care about my car's collision
+
+#2 possible method
+
+
+
+
 
 
 

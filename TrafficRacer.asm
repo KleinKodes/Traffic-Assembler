@@ -12,7 +12,7 @@
 
 
 EXTRA_GAME_SPACE: .space 20000
-myCarCoords: .word 32, 16 #(x, y) coordinates relative to 64x64 bg 
+
 str: .asciiz "We game looped LOL\n" #debug print statements LOL
 
 strips: .word 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0x00000000, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0xFFFFFF, 0xFFFFFF, 0xFFFFFF, 
@@ -27,12 +27,21 @@ life: .word 3
 score: .word 0
 scoreMultiplier: .word 1
 scoreColor: .word 0x3F48CC
+scoreTicker: .word 0
+scoreInterval: .word 4 #how nany frames before we increase score
+drawIncrementer: .word 4 #array size basically
+spawnTicker: .word 0 #counter for frames before spawning
+spawnInterval: .word 25 #how many frames before we spawn another vehicle
+recentLane: .word 0 #the last lane a car was spawned in --- starts at 0 to stand for no spawns.
+invincibilityFrames: .word 0 #number of i-frames we have remaining
+invincibilityTicker: .word 0 #counter to see when we should do invincibility animation (aka not draw car every x (probably other) frames)
+invinciblityInterval: .word 1 #how often to draw car while invincible #1 stands for every other frame
 
 
 #have added a 0x00000100 offset to every non gp address to allow for space before and after buffer
 
 myCarAddress: .word 0x1000de80 # address for my car
-
+myCarCoords: .word 32, 16 #(x, y) coordinates relative to 64x64 bg 
 myCarSize: .word 14
 
 myCarDefaultAddress: .word 0x1000de80 # default address for my car
@@ -44,7 +53,7 @@ myCarBottomBound: .word 50
 
 myCarXVelocity: .word 0
 
-myCarYVelocity: .word 2
+myCarYVelocity: .word 0
 
 displayBuf: .word 0x1000ce00
 displayAddress: .word 0x10008000
@@ -67,7 +76,7 @@ truckDefaultCoords: .word 0, 50 # default (x, y) coordinates relative to 64x64 b
 truckLeftBound: .word 0
 truckRightBound: .word 51
 truckTopBound: .word -9
-truckBottomBound: .word 78
+truckBottomBound: .word 800
 
 
 tankAddress: .word 0x1000de40
@@ -81,7 +90,26 @@ tankDefaultCoords: .word 16, 16 # default (x, y) coordinates relative to 64x64 b
 tankLeftBound: .word 0
 tankRightBound: .word 51
 tankTopBound: .word -8
-tankBottomBound: .word 83
+tankBottomBound: .word 800
+
+
+
+
+lamboAddress: .word 0x1000de40
+lamboCoords: .word 16, 16
+lamboSize: .word 13
+lamboYVelocity: .word 0
+lamboXVelocity: .word 0
+
+lamboDefaultAddress: .word 0x1000de40 # default address for my lambo
+lamboDefaultCoords: .word 16, 16 # default (x, y) coordinates relative to 64x64 bg 
+lamboLeftBound: .word 0
+lamboRightBound: .word 51
+lamboTopBound: .word -8
+lamboBottomBound: .word 83
+
+
+
 
 
 
@@ -90,10 +118,10 @@ tankBottomBound: .word 83
 stripsAddress: .word 0x1000ce00
 stripsCoords: .word 0, 0
 stripsSize: .word 64
-stripsYVelocity: .word 1
+stripsYVelocity: .word -1
 stripsXVelocity: .word 0
 
-stripsDefaultAddress: .word 0x1000ce00 # default address for my tank
+stripsDefaultAddress: .word 0x1000ce00 # default address for my strips
 stripsDefaultCoords: .word 0, 0 # default (x, y) coordinates relative to 64x64 bg 
 stripsLeftBound: .word 0
 stripsRightBound: .word 0
@@ -105,6 +133,18 @@ stripsBottomBound: .word 3
 
 booleanTrue: .word 1 #Using this to pass flags... e.g. is this my car? etc
 booleanFalse: .word 0
+
+
+randomLaneAddresses: .word 0x1000ce00, 0x1000ce40, 0x1000ce80, 0x1000cec0 #tops of lanes 1, 2 3 and 4
+
+#vehicle integer id's
+#truck - 0
+#tank - 1
+#lambo - 2
+#motorbike - 3
+#gokart - 4
+#extraLife - 5
+#invincibility - 6
 
 
 
@@ -150,13 +190,18 @@ MUSIC:
 ##syscall 
 
 
-MUSIC_DONE:
+#LOAD OPENING SCREEN
 
 
+#wait for q or p to be pressed
+OPENING_SCREEN_LOOP:
 
 
+jal CHECK_KEYBOARD2
 
-DONE_MUSIC:
+j OPENING_SCREEN_LOOP
+
+START_GAME:
 
 #load address of empty screen and buffer to be drawn on by draw bg function
 lw $t0 displayBuf 
@@ -191,17 +236,24 @@ syscall   #loading 4 into v0 tells syscall the required function is print whatav
 
 #Draw Strips
 
+lw $t1 booleanTrue
+addi $t1 $t1 1 #set t1 to 2 to tell function this is strips
+sw $t1 -8($sp)
+
+lw $t1 stripsCoords
+sw $t1 -12($sp)
+
 lw $t1 stripsAddress
-sw $t1 -4($sp)
+sw $t1 -16($sp)
 
 la $t1 strips
-sw $t1 -8($sp)
+sw $t1 -20($sp)
 
 
 lw $t1 stripsSize
-sw $t1 -12($sp)
+sw $t1 -24($sp)
 
-addi $sp $sp -12
+addi $sp $sp -24
 
 jal DRAW_MY_CAR
 
@@ -209,52 +261,70 @@ jal DRAW_MY_CAR
 #Draw cars
 
 
-lw $t1 myCarAddress #puts address of car on stack
+lw $t1 booleanTrue #to say this is my car ...aka special behaviour plz
 sw $t1 -4($sp)
+
+lw $t1 myCarCoords
+sw $t1 -8($sp)
+
+lw $t1 myCarAddress #puts address of car on stack
+sw $t1 -12($sp)
 
 
 
 la $t1 myCar #puts address of car image on sstack
-sw $t1 -8($sp)
+sw $t1 -16($sp)
 
 lw $t1 myCarSize #puts size of car image on stack
-sw $t1 -12($sp)
+sw $t1 -20($sp)
 
-addi $sp $sp -12
+addi $sp $sp -20
 
 jal DRAW_MY_CAR
 
 
 #DRAW White Truck
 
-lw $t1 truckAddress
+lw $t1 booleanFalse
 sw $t1 -4($sp)
 
-la $t1 whiteTruck
+lw $t1 truckCoords
 sw $t1 -8($sp)
 
-lw $t1 truckSize
+lw $t1 truckAddress
 sw $t1 -12($sp)
 
-addi $sp $sp -12
+la $t1 whiteTruck
+sw $t1 -16($sp)
+
+lw $t1 truckSize
+sw $t1 -20($sp)
+
+addi $sp $sp -20
 
 jal DRAW_MY_CAR
 
 
 #Draw Tank
 
-
-lw $t1 tankAddress
+lw $t1 booleanFalse
 sw $t1 -4($sp)
 
-la $t1 tank
+lw $t1 tankCoords
 sw $t1 -8($sp)
 
 
-lw $t1 tankSize
+lw $t1 tankAddress
 sw $t1 -12($sp)
 
-addi $sp $sp -12
+la $t1 tank
+sw $t1 -16($sp)
+
+
+lw $t1 tankSize
+sw $t1 -20($sp)
+
+addi $sp $sp -20
 
 jal DRAW_MY_CAR
 
@@ -681,7 +751,8 @@ sw $t1 ($sp)
 
 
 addi $sp $sp -4
-lw $t1 booleanFalse #not my car
+lw $t1 booleanTrue 
+addi $t1 $t1 1 #setting it to 2 so that i can make it's movement special
 sw $t1 ($sp)
 
 
@@ -839,11 +910,25 @@ j FILL_LOOP
 
 DONE_FILLING:
 
+lw $t8 scoreTicker
+lw $t9 scoreInterval
+
+bne $t8 $t9 NOT_SCORE_FRAME
+li $t8 0 #if it is a score frame then reset score ticker and update score + bar
+sw $t8 scoreTicker
+
 
 lw $t6 score
 addi $t6 $t6 1
 sw $t6 score
 jr $ra
+NOT_SCORE_FRAME: #if not a score frame increment ticker and return
+addi $t8 $t8 1
+sw $t8 scoreTicker
+jr $ra
+
+
+
 
 
 
@@ -871,6 +956,9 @@ jr $ra
 
 DRAW_MY_CAR:
 
+lw $s6 drawIncrementer
+
+
 
 lw $t6 ($sp) #gets size of car from stack
 mult $t6 $t6 #squares number b/c every hitbox is square by developer choice
@@ -885,7 +973,7 @@ mflo $t9
 
 lw $t8 4($sp) #gets address of car img from stack
 lw $t0 8($sp) #gets car addres from stack
-addi $sp $sp 12 #increments stack pointer
+
 
 
 addi $t4 $0 0
@@ -893,6 +981,44 @@ addi $t4 $0 0
 addi $t2 $0 0 #t2 stores a count for if we get to the 64th pixel
 #at that point we have to go to the next line --- aka ahead 256-64 px
 addi $t3 $0 0 #second counter for car array indexing
+
+lw $t1 12($sp) #gets x coordinate of car from stack
+lw $t5 16($sp) #gets is this my car flag from stack
+beq $t5 2 NON_FLIP_IMG #go to non flip image if we are working with strips
+bnez $t5 MY_CAR_SHENANIGANS
+li $t5 32 #midway point of screen
+bge $t1 $t5 NON_FLIP_IMG
+
+
+move $t7 $t9
+move $t9 $t3 #swaps t3 and t9
+move $t3 $t7
+sub $s6 $0 $s6 #multiply s6 by negative 1( by subtracting itself from 0 LOL just like the quiz) 
+subi $t3 $t3 4
+subi $t9 $t9 4 #subtracts 4 from each of these to fit with 0 indexed arrays
+
+j NON_FLIP_IMG
+
+MY_CAR_SHENANIGANS:
+#check invincibility frames and ticker
+lw $t7 invincibilityFrames
+beqz $t7 NON_FLIP_IMG #if we have 0 invinciblity frames proceed to drawing as normal
+#otherwise do not draw
+lw $t7 invincibilityTicker
+bnez $t7 INVINCE_TICKER_GOOD
+#if ticker is not ready incrememnt it, increment sp and go home
+addi $t7 $t7 1
+sw $t7 invincibilityTicker
+addi $sp $sp 20 #increments stack pointer
+jr $ra
+INVINCE_TICKER_GOOD:
+#otherwise set ticker to 0 and resume drawing
+li $t7 0
+sw $t7 invincibilityTicker
+
+
+NON_FLIP_IMG:
+addi $sp $sp 20 #increments stack pointer
 
 MY_CAR_LOOP:
 
@@ -911,11 +1037,13 @@ addu $t5 $t0 $t4 #t0 is mem address of display map
 lw $t1, ($t7) #loads pixel from my_car array into t1
 
 
-beq $t1 1 MY_CAR_TRANSPARENT
+beq $t1 1 MY_CAR_TRANSPARENT #does not paint transparent pixel
+bgt $t5 0x10010F00 MY_CAR_TRANSPARENT #does not paint ahead of buffer
+blt $t5 0x1000ce00 MY_CAR_TRANSPARENT #does not paint behind buffer
 sw  $t1, ($t5)  # paint position t6 the colour stored in t1
 MY_CAR_TRANSPARENT:
-addi $t4 $t4 4 #incrementer
-addi $t3 $t3 4
+add $t4 $t4 4 #incrementer
+add $t3 $t3 $s6 #increment/decrement by 4/-4
 addi $t2 $t2 1
 
 
@@ -981,11 +1109,23 @@ addu $t6 $t0 $t6 #t0 is mem address of display map
 
 lw $t1, ($t7) #loads pixel from bg array into t1
 
+
+bgt $t6 0x10010F00 OOB_ERASE #does not paint ahead of buffer
+blt $t6 0x1000ce00 OOB_ERASE #branches to stop out of bound erase
+
 sw  $t1, ($t6)  # paint position t6 (on display map) the colour stored in t1
+j DONE_OOB
+
+OOB_ERASE:
+move $s4 $t6
+
+DONE_OOB:
 
 addi $t4 $t4 1 #incrementer
 addi $t3 $t3 1
 addi $t2 $t2 1
+
+
 
 bne $t2, $t9 ERASE_CAR_DONT_SKIP_ROW
 addi $t2 $0 0
@@ -1029,16 +1169,46 @@ add $t5 $t5 $t1 #add x velocity to x coord
 lw $t6 20($sp) #loads the if this is my car flag
 addi $sp $sp 24
 
+li $t3 2 
+beq $t6 $t3 SLOW_DOWN #do normal operation if we are dealing with strips
+
 beqz $t6 ANOTHER_LOVER_CAR
 
-li $t3 5
-li $t6 1
-blt $t2 $t6 SLOW_DOWN #moves car back if speed is at 1 or lower
-blt $t2 $t3 LEAVE_Y_ALONE #only moves if velocity is 5 or higher or 1/lower
+
+li $t3 3
+li $t7 -1
+blt $t2 $t7 SLOW_DOWN #moves car back if speed at -2 or lower
+blt $t2 $t3 LEAVE_Y_ALONE #only moves if velocity is 3 or higher or 1/lower
+addi $t4 $t4 2 #"subtracts" 2 from velocity to make movement smaller 
+
 SLOW_DOWN: 
-ANOTHER_LOVER_CAR:
+
 sub $t4 $t4 $t2 #add y velocity to y coord
-addi $t4 $t4 2
+
+
+j LEAVE_Y_ALONE
+
+
+ANOTHER_LOVER_CAR:
+
+li $t7 32 #32 is value for middle of road
+blt $t1 $t7 MOVE_NEGATIVE #switch to moving negatively if in opposing lane 
+sub $t4 $t4 $t2 #add y velocity to y coord
+
+j LEAVE_Y_ALONE
+
+MOVE_NEGATIVE:
+
+bge $t2 1 NO_NEED_TO_SET_BASE_VELOCITY #if y velocity for car moving in opposite lane is less than 1 then set it to 1
+li $t2 1
+NO_NEED_TO_SET_BASE_VELOCITY:
+
+add $t4 $t4 $t2
+
+
+
+#check if x cord is less than 32, if so we need to move car in opposite direction
+
 
 LEAVE_Y_ALONE:
 
@@ -1054,22 +1224,42 @@ LEAVE_Y_ALONE:
 #if x velocity is 1 head right 1px per frame
 #if x velocity is -1 head left  1px per frame
 
-#in essence new address = old address + 4(x velocity) + -(4*64)(y velocitt - 2)
+#in essence new address = old address + 4(x velocity) + -(4*64)(y velocity)
+li $t3 2 
+beq $t6 $t3 STRIP_ADDRESS_HANDLER #do normal operation if we are dealing with strips
 beqz $t6 ANOTHER_LOVER_CAR2
 
-li $t3 5
-li $t6 1
-blt $t2 $t6 SLOW_DOWN2 #moves car back if speed is at 1 or lower
-blt $t2 $t3 LEAVE_Y_ALONE2 #only moves if velocity is 5 or higher or 1/lower
+li $t3 3
+li $t7 -1
+blt $t2 $t7 STRIP_ADDRESS_HANDLER #moves car back if speed is at 1 or lower
+blt $t2 $t3 LEAVE_Y_ALONE2 #only moves if velocity is 3 or higher or 1/lower
+addi $t0 $t0 512 #"subtracts" 2 from velocity to make movement smaller 
+j STRIP_ADDRESS_HANDLER
 SLOW_DOWN2:
 ANOTHER_LOVER_CAR2:
 addi $t3 $0 -256 #(-4*64)
-addi $t2 $t2 -2 #(y velocity - 2)
+
 mult $t3 $t2
-mflo $t3  #-(4*64)(y velocitt - 2)
+mflo $t3  #-(4*64)(y velocity)
 
-
+li $t7 32
+blt $t1 $t7 MOVE_NEGATIVE2 #subtract y difference from address if we are on left half of road (aka x coord (t1) < 32 (t7))
 add $t0 $t0 $t3 #add to address
+
+j LEAVE_Y_ALONE2
+
+STRIP_ADDRESS_HANDLER:
+addi $t3 $0 -256 #(-4*64)
+
+mult $t3 $t2
+mflo $t3  #-(4*64)(y velocity)
+add $t0 $t0 $t3 #add to address
+
+j LEAVE_Y_ALONE2
+
+MOVE_NEGATIVE2:
+sub $t0 $t0 $t3
+
 
 LEAVE_Y_ALONE2:
 
@@ -1195,10 +1385,43 @@ lw $t6 12($sp) # is this my car flag
 
 beqz $t6 NOT_MY_MOTOR
 
-move $s6 $t6 #to test LOL
+addi $sp $sp 16
+
+#If it is my car that needs its position reset we need to subtract the number of lives and then reset the speed of every object
 lw $t7 life
 subi $t7 $t7 1
 sw $t7 life
+
+#Need to push needed temporary registers (t4, t5, t0, ra) onto stack before nested function call
+
+sw $ra -4($sp)
+sw $t4 -8($sp)
+sw $t5 -12($sp)
+sw $t0 -16($sp)
+addi $sp $sp -16
+
+lw $t7 myCarYVelocity
+li $t8 0
+blt $t7 $t8 END_DECREASE_VELOCITY_LOOP
+DECREASE_VELOCITY_LOOP:
+lw $t7 myCarYVelocity #loads current velocity for respond to s function to decrease it until it hits base value of 2
+li $t8 0
+beq $t7 $t8 END_DECREASE_VELOCITY_LOOP
+
+
+jal RESPOND_TO_s
+
+j DECREASE_VELOCITY_LOOP
+
+END_DECREASE_VELOCITY_LOOP:
+
+
+lw $t0 ($sp)
+lw $t5 4($sp)
+lw $t4 8($sp)
+lw $ra 12($sp)
+
+
 
 NOT_MY_MOTOR:
 
@@ -1239,6 +1462,8 @@ beq $t2, 0x64, RESPOND_TO_d
 beq $t2, 0x77, RESPOND_TO_w
 beq $t2, 0x71, RESPOND_TO_q
 
+jr $ra
+
 RESPOND_TO_a:
 lw $t2 myCarXVelocity
 addi $t2 $t2 -1
@@ -1251,6 +1476,10 @@ addi $t2 $t2 1
 sw $t2 myCarXVelocity
 jr $ra
 
+
+
+
+
 RESPOND_TO_s:
 
 #Reset x velocity to 0
@@ -1259,23 +1488,50 @@ sw $0 myCarXVelocity
 
 lw $t2 myCarYVelocity
 addi $t2 $t2 -1
-beq $t2 -1 LOWER_LIMIT #makes sure Y velocity never goes below 1
+beq $t2 -3 LOWER_LIMIT #makes sure Y velocity never goes below 1
 sw $t2 myCarYVelocity
-lw $t2 truckYVelocity
-addi $t2 $t2 1
-sw $t2 truckYVelocity
-lw $t2 tankYVelocity
-addi $t2 $t2 1
-sw $t2 tankYVelocity
+
+sw $ra -4($sp)
+la $t2 truckYVelocity
+sw $t2 -8($sp)
+lw $t2 truckCoords
+sw $t2 -12($sp)
+li $t2 1
+sw $t2 -16($sp)
+addi $sp $sp -16
+jal DIRECTIONAL_VELOCITY_EDIT
+
+
+
+la $t2 tankYVelocity
+sw $t2 -4($sp)
+lw $t2 tankCoords
+sw $t2 -8($sp)
+li $t2 1
+sw $t2 -12($sp)
+addi $sp $sp -12
+jal DIRECTIONAL_VELOCITY_EDIT
+
+lw $ra ($sp)
+addi $sp $sp 4
 
 
 
 jr $ra
+
+
+
+
+
+
 
 LOWER_LIMIT:
-addi $t2 $0 1
+addi $t2 $t2 1
 sw $t2 myCarYVelocity
 jr $ra
+
+
+
 
 
 RESPOND_TO_w:
@@ -1284,17 +1540,76 @@ addi $t2 $t2 1
 beq $t2 7 UPPER_LIMIT #makes sure Y velocity never goes above 5
 sw $t2 myCarYVelocity
 ONLY_MOVE_SCREEN_DOWN: # making it so that car doesn't go up until u are at speed 4
-lw $t2 truckYVelocity
-addi $t2 $t2 -1
-sw $t2 truckYVelocity
-lw $t2 tankYVelocity
-addi $t2 $t2 -1
-sw $t2 tankYVelocity
+#making a function that accepts a vehicles y velocity and x coordinate as parameters
+#if x coordinate less than 32 then increase y velocity by 1... otherwise decrease it by 1
+
+sw $ra -4($sp)
+la $t2 truckYVelocity
+sw $t2 -8($sp)
+lw $t2 truckCoords
+sw $t2 -12($sp)
+li $t2 -1
+sw $t2 -16($sp)
+addi $sp $sp -16
+jal DIRECTIONAL_VELOCITY_EDIT
+
+la $t2 tankYVelocity
+sw $t2 -4($sp)
+lw $t2 tankCoords
+sw $t2 -8($sp)
+li $t2 -1
+sw $t2 -12($sp)
+addi $sp $sp -12
+jal DIRECTIONAL_VELOCITY_EDIT
 
 
 
-
+lw $ra ($sp)
+addi $sp $sp 4
 jr $ra
+
+
+
+
+
+
+
+
+DIRECTIONAL_VELOCITY_EDIT:
+
+
+lw $t2 ($sp) #gets whether we were originally going up (1) or down (-1)
+lw $t1 4($sp) #gets x coordinate from stack
+lw $t0 8($sp) #gets y velocity address from stack
+
+addi $sp $sp 12
+
+lw $t4 ($t0)
+
+
+li $t3 32
+
+blt $t1 $t3 DIRECTIONAL_INCREASE #directional increase if x coord less than 32
+add $t4 $t4 $t2
+sw $t4 ($t0)
+jr $ra
+
+DIRECTIONAL_INCREASE:
+
+sub $t4 $t4 $t2
+bge $t4 1 NO_NEED_TO_SET_BASE_VELOCITY2 #if y velocity for car moving in opposite lane is less than 1 then set it to 1
+li $t4 1
+NO_NEED_TO_SET_BASE_VELOCITY2:
+sw $t4 ($t0)
+jr $ra
+
+
+
+
+
+
+
+
 
 UPPER_LIMIT:
 addi $t2 $0 6
@@ -1305,6 +1620,34 @@ RESPOND_TO_q:
 j EXIT
 
 
+
+
+
+
+
+#CHECK KEYBOARD IN NON-GAME SCREENS
+
+
+#CHECK KEYBOARD INPUT
+
+CHECK_KEYBOARD2:
+
+li $t9, 0xffff0000 
+lw $t8, 0($t9) 
+beq $t8, 1, KEYPRESS_HAPPENED2
+
+jr $ra
+
+KEYPRESS_HAPPENED2:
+sw $0 ($t9)
+lw $t2, 4($t9) # this assumes $t9 is set to 0xfff0000  
+beq $t2, 0x70, RESPOND_TO_p # ASCII code of 'p' is 0x70
+beq $t2, 0x71, RESPOND_TO_q
+
+jr $ra
+
+RESPOND_TO_p:
+j START_GAME
 
 
 
@@ -1324,6 +1667,91 @@ j EXIT
 
 
 
+
+#Spawning function
+lw $t0 spawnTicker
+lw $t1 spawnInterval
+
+bne $t0 $t1 WAIT_NO_SPAWN #if ticker does not match interval do nothing
+#else
+li $t0 0 
+sw $t0 spawnTicker #sets spawnTicker to 0
+#generate 2 random numbers... a random position (start of lane) and a random vehicle id
+#set the vehicle address and default to the position specified 
+sw $ra -4($sp)
+addi $sp $sp -4 #push ra onto stack to facilitate nested call
+
+lw $t6 recentLane
+
+
+REPEAT_LANE:
+
+jal CHOOSE_RANDOM_LANE
+
+lw $t4 ($sp)
+addi $sp $sp 4 #loads random lane fetched into t4
+beq $t4 $t6 REPEAT_LANE #if t4 = t6 then we are repeating a lane and should try again
+
+sw $t4 recentLane #stores last spawned on lane
+
+jal CHOOSE_RANDOM_VEHICLE
+
+lw $t5 ($sp)
+addi $sp $sp 4 #loads random car fetched into t5
+
+#Massive if statement depending on which car it is...
+#have to hard code
+
+beq $t5 0 SPAWN_TRUCK
+beq $t5 1 SPAWN_TANK
+beq $t5 2 SPAWN_LAMBO
+beq $t5 3 SPAWN_MOTORBIKE
+beq $t5 4 SPAWN_GOKART
+beq $t5 5 SPAWN_EXLIFE
+beq $t5 6 SPAWN_INVINCE
+
+jr $ra
+
+
+
+
+SPAWN_TRUCK:
+sw $t4 truckDefaultAddress
+sw $t4 truckAddress
+jr $ra
+
+SPAWN_TANK:
+sw $t4 tankDefaultAddress
+sw $t4 tankAddress
+jr $ra
+
+SPAWN_LAMBO:
+sw $t4 lamboDefaultAddress
+sw $t4 lamboAddress
+jr $ra
+
+SPAWN_MOTORBIKE:
+jr $ra
+
+SPAWN_GOKART:
+jr $ra
+
+SPAWN_EXLIFE:
+jr $ra
+
+SPAWN_INVINCE:
+jr $ra
+
+
+
+
+
+WAIT_NO_SPAWN:
+lw $t0 spawnTicker
+addi $t0 $t0 1
+sw $t0 spawnTicker #incrememnts spawnTicker
+jr $ra
+
 CHOOSE_RANDOM_LANE:
 li $v0, 41         # Service 41, random int
 li $a0, 0          # Select random generator 0
@@ -1333,6 +1761,36 @@ syscall            # Generate random int (returns in $a0)
 li $v0, 1  # Service 1, print int
 syscall    # Print previously generated random int
 
+sw $a0 -4($sp)
+addi $sp $sp -4
+
+jr $ra
+
+CHOOSE_RANDOM_VEHICLE:
+li $v0, 41         # Service 41, random int
+li $a0, 0          # Select random generator 0
+li $a1, 7	   #Set upper limit to 4
+syscall            # Generate random int (returns in $a0)
+
+li $v0, 1  # Service 1, print int
+syscall    # Print previously generated random int
+
+sw $a0 -4($sp)
+addi $sp $sp -4
+
+jr $ra
+
+
+
+
+#Invincibility Handler
+INVINCIBILITY_HANDLER:
+lw $t0 invincibilityFrames
+blez $t0 NO_SUBTRACT_NEEDED
+addi $t0 $t0 -1
+
+NO_SUBTRACT_NEEDED: #we have 0 i-frames so do not decrement
+jr $ra
 
 
 #SLEEP SECTION
